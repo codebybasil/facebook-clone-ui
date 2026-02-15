@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook jaisa banaya hai</title>
+
+    <!-- 
+        YAHAN BOOTSTRAP KI LINK LAGAI HAI 
+        BOOTSTRAP SE GRID AUR BUTTONS BANANE ME ASANI HOTI HAI
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 
+        FONT AWESOME KE ICONS KE LIYE YEH LINK HAI
+        ISSE FACEBOOK WALE ICONS MIL JATE HAIN
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- 
+        YEH MERI APNI CSS HAI 
+        JO MAIN NE BANAI HAI STYLE K LIYE
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 
+        ====================================================
+        TOP NAVBAR - YEH SAB SE UPAR WALI BAR HAI
+        ISME FACEBOOK LOGO, SEARCH, AUR RIGHT SIDE ICONS HAIN
+        YEH STICKY HAI MATLAB SCROLL KARNE PAR BHI UPAR RAHEGI
+        ====================================================
+    -->
+    <nav class="top-bar d-flex align-items-center justify-content-between">
+
+        <!-- 
+            LEFT SIDE WALA HISSA 
+            ISME FACEBOOK LOGO AUR SEARCH BOX HAI
+        -->
+        <div class="d-flex align-items-center left-part">
+            <!-- FACEBOOK KA BLUE LOGO -->
+            <i class="fa-brands fa-facebook fa-2x me-2 fb-icon"></i>
+
+            <!-- SEARCH BOX WALA AREA -->
+            <div class="position-relative search-area">
+                <!-- SEARCH ICON JO ANDAR DIKHTA HAI -->
+                <i class="fa-solid fa-magnifying-glass search-small-icon"></i>
+                <!-- ASLI INPUT FIELD JAHAN LIKHTE HAIN -->
+                <input type="text" placeholder="Search Facebook" class="search-box" id="searchField">
+            </div>
+        </div>
+
+        <!-- 
+            MIDDLE MENU - YEH BEECH WALE BUTTONS HAIN
+            HOME, REELS, STORE, ETC.
+            SIRF BADI SCREEN PAR DIKHTE HAIN (d-none d-md-flex)
+        -->
+        <div class="middle-buttons d-none d-md-flex">
+            <!-- HOME BUTTON - ACTIVE HAI TO BLUE HOGA -->
+            <div class="menu-btn active-menu">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <!-- REELS BUTTON -->
+            <div class="menu-btn">
+                <img src="images/clapperboard_10426503.png" alt="reels" height="27px" class="reels-img">
+            </div>
+            <!-- STORE BUTTON -->
+            <div class="menu-btn">
+                <i class="fa-solid fa-store"></i>
+            </div>
+            <!-- USERS BUTTON - ISME NOTIFICATION BADGE BHI HAI -->
+            <div class="menu-btn">
+                <i class="fa-solid fa-users"></i>
+                <span class="number-badge">9+</span>
+            </div>
+            <!-- GAMEPAD BUTTON -->
+            <div class="menu-btn">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+        </div>
+
+        <!-- 
+            RIGHT SIDE WALA HISSA 
+            ISME MENU, MESSENGER, BELL AUR PROFILE PHOTO HAI
+        -->
+        <div class="d-flex align-items-center right-part">
+            <!-- MENU ICON - THREE LINES WALA -->
+            <div class="me-2">
+                <i class="fa-solid fa-bars circle-icon"></i>
+            </div>
+            <!-- MESSENGER ICON -->
+            <div class="me-2">
+                <i class="fa-brands fa-facebook-messenger circle-icon"></i>
+            </div>
+            <!-- NOTIFICATION BELL ICON -->
+            <div class="me-2">
+                <i class="fa-solid fa-bell circle-icon"></i>
+            </div>
+            <!-- PROFILE PHOTO - GOL GOL -->
+            <div class="rounded-circle profile-pic">
+                <img src="images/profile.jpg" alt="Profile">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        ====================================================
+        MAIN BODY YAHAN SE START HOTI HAI
+        TEEN COLUMNS HAIN - LEFT, CENTER, RIGHT
+        ====================================================
+    -->
+    <div class="container-fluid main-body">
+        <div class="row">
+
+            <!-- 
+                ================================================
+                LEFT SIDEBAR - YEH LEFT MEIN JO MENU HAI
+                ISME PROFILE, FRIENDS, GROUPS ETC KE LINKS HAIN
+                SIRF TABLET AUR DESKTOP PAR DIKHTA HAI (d-none d-md-block)
+                ================================================
+            -->
+            <div class="col-md-3 col-lg-2 left-menu d-none d-md-block">
+
+                <!-- APNA PROFILE LINK -->
+                <a href="#" class="left-item">
+                    <div class="rounded-circle small-profile me-2">
+                        <img src="images/profile.jpg" alt="Profile">
+                    </div>
+                    <span>Abul Basil</span>
+                </a>
+
+                <!-- META AI LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box">
+                        <img src="images/meta.png" alt="">
+                    </div>
+                    <span>Meta AI</span>
+                </a>
+
+                <!-- FRIENDS LINK - BLUE BACKGROUND WALA ICON -->
+                <a href="#" class="left-item">
+                    <div class="icon-box blue-bg">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <span>Friends</span>
+                </a>
+
+                <!-- PROFESSIONAL DASHBOARD LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box">
+                        <img src="images/proffessional.png" alt="">
+                    </div>
+                    <span>Professional dashboard</span>
+                </a>
+
+                <!-- MEMORIES LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box blue-bg">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <span>Memories</span>
+                </a>
+
+                <!-- SAVED LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box blue-bg">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <span>Saved</span>
+                </a>
+
+                <!-- GROUPS LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box blue-bg">
+                        <i class="fa-solid fa-users-rectangle"></i>
+                    </div>
+                    <span>Groups</span>
+                </a>
+
+                <!-- REELS LINK - PURPLE BACKGROUND WALA -->
+                <a href="#" class="left-item">
+                    <div class="icon-box purple-bg">
+                        <img src="images/reel.png" alt="">
+                    </div>
+                    <span>Reels</span>
+                </a>
+
+                <!-- MARKETPLACE LINK -->
+                <a href="#" class="left-item">
+                    <div class="icon-box blue-bg">
+                        <i class="fa-solid fa-shop"></i>
+                    </div>
+                    <span>Marketplace</span>
+                </a>
+
+                <!-- 
+                    SHORTCUTS KA SECTION 
+                    ISME JO BARBAR USE KARTE HAIN WO LINKS HAIN
+                -->
+                <div class="shortcut-section">
+                    <div class="heading-small">Your Shortcuts</div>
+                    <!-- 8 BALL POOL GAME KA LINK -->
+                    <a href="#" class="left-item">
+                        <div class="icon-box gray-bg">
+                            <img src="images/8ball.png" alt="" height="35" class="rounded">
+                        </div>
+                        <span>8 Ball Pool</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 
+                ================================================
+                CENTER FEED - YEH MAIN FEED HAI
+                JAHAN POSTS AUR STORIES DIKHTI HAIN
+                YEH HAR SCREEN PAR DIKHTA HAI
+                ================================================
+            -->
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6 mx-auto">
+
+                <!-- 
+                    CREATE POST BOX - NAYA POST KARNE KA BOX
+                    ISME PROFILE, INPUT AUR TEEN OPTIONS HAIN
+                -->
+                <div class="post-box p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+
+                        <!-- LEFT SIDE: PROFILE PHOTO AUR INPUT FIELD -->
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <!-- PROFILE PHOTO -->
+                            <div class="rounded-circle me-2 profile-pic">
+                                <img src="images/profile.jpg" alt="Profile">
+                            </div>
+                            <!-- INPUT FIELD JAHAN LIKHTE HAIN -->
+                            <input type="text" class="form-control rounded-pill bg-light flex-grow-1 "
+                                placeholder="What's on your mind, Abul Basil?" style="max-width: 520px;">
+                        </div>
+
+                        <!-- RIGHT SIDE: TEEN OPTIONS - LIVE, PHOTO, FEELING -->
+                        <div class="d-flex align-items-center gap-3 ms-3">
+
+                            <!-- LIVE VIDEO WALA OPTION - CAMERA ICON -->
+                            <div class="d-flex align-items-center option-hover"
+                                style="cursor: pointer; padding: 8px 12px; border-radius: 50px;">
+                                <img src="images/fbcamera.png" alt="camera" width="auto" height="25">
+                            </div>
+
+                            <!-- PHOTO/VIDEO WALA OPTION - IMAGES ICON -->
+                            <div class="d-flex align-items-center option-hover"
+                                style="cursor: pointer; padding: 5px 12px; border-radius: 50px;">
+                                <i class="fa-solid fa-images text-success me-1"></i>
+                            </div>
+
+                            <!-- FEELING WALA OPTION - REEL ICON -->
+                            <div class="d-flex align-items-center option-hover"
+                                style="cursor: pointer; padding: 8px 12px; border-radius: 50px;">
+                                <img src="images/reel.png" alt="reels" width="auto" height="25">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    STORIES WALA SECTION - YEH STORIES HAIN
+                    JO SIDE SCROLL HOTI HAIN (overflow-auto)
+                -->
+                <div class="d-flex gap-2 overflow-auto mb-3 pb-2 stories-scroll">
+
+                    <!-- CREATE STORY WALI CARD - APNI STORY BANANE K LIYE -->
+                    <div class="card story-create text-center p-0">
+                        <!-- UPPER PART MEIN PROFILE PHOTO -->
+                        <img src="images/profile.jpg" class="story-top-img">
+                        <!-- NICHE WALA PART JISME PLUS AUR TEXT HAI -->
+                        <div class="story-bottom-part">
+                            <div class="plus-circle">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <span class="story-label">Create story</span>
+                        </div>
+                    </div>
+
+                    <!-- STORY 1: SAYLANI WELFARE KI STORY -->
+                    <div class="card story-card story-one p-0">
+                        <!-- STORY PAR LAGI PROFILE PHOTO -->
+                        <img src="images/saylani.jpg" alt="" class="story-profile">
+                        <!-- STORY KA NAAM -->
+                        <span class="story-name">Saylani Welfare...</span>
+                    </div>
+
+                    <!-- STORY 2: MUHAMMAD WASEeq KI STORY -->
+                    <div class="card story-card story-two p-0">
+                        <img src="images/waseeq.jpg" alt="" class="story-profile">
+                        <span class="story-name">Muhammad Waseeq</span>
+                    </div>
+
+                    <!-- STORY 3: SUNOOQA WAHEED KI STORY -->
+                    <div class="card story-card story-three p-0">
+                        <img src="images/aliza2.jpg" alt="" class="story-profile">
+                        <span class="story-name">Sunooqa Waheed</span>
+                    </div>
+
+                    <!-- STORY 4: HUZAIFA ANSARI KI STORY -->
+                    <div class="card story-card story-four p-0">
+                        <img src="images/huzaifa.jpg" alt="" class="story-profile">
+                        <span class="story-name">Huzaifa Ansari</span>
+                    </div>
+
+                    <!-- STORY 5: ALIZA SHAH KI STORY -->
+                    <div class="card story-card story-five p-0">
+                        <img src="images/sonu.jpg" alt="" class="story-profile">
+                        <span class="story-name">Aliza Shah</span>
+                    </div>
+                </div>
+
+                <!-- 
+                    POST 1: SAYLANI WELFARE WALI POST
+                    YEH SPONSORED POST HAI
+                -->
+                <div class="post-box">
+
+                    <!-- POST KA HEADER - PROFILE, NAME, OPTIONS -->
+                    <div class="post-header">
+                        <div class="d-flex align-items-center">
+                            <!-- POST KARNE WALI PROFILE PHOTO -->
+                            <div class="rounded-circle profile-pic me-2">
+                                <img src="images/saylani.jpg" alt="Saylani Logo">
+                            </div>
+                            <!-- POST KARNE WALE KA NAAM AUR TIME -->
+                            <div class="post-info">
+                                <h6>Saylani Welfare International Trust</h6>
+                                <span><i class="fa-solid fa-earth-americas"></i> · Sponsored · <i
+                                        class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <!-- CLOSE ICON - X WALA -->
+                        <i class="fa-solid fa-xmark text-secondary close-icon"></i>
+                    </div>
+
+                    <!-- POST KA TEXT - JO LIKHA HOTA HAI -->
+                    <div class="post-text-area">
+                        <p class="mb-1">کھانے پینے کی اشیاء کی فراہمی کے لیے سیلانی ویلفیئر ہمیشہ حاضر ہے۔
+                            <br><span class="hashtag">#SaylaniWelfare #FoodDistribution</span>
+                        </p>
+                    </div>
+
+                    <!-- POST KI IMAGE - JO PIC LAGI HOTI HAI -->
+                    <div class="post-img-box">
+                        <img src="images/saylaniramdan.jpg" alt="Ramadan Illustration">
+                    </div>
+
+                    <!-- 
+                        POST KE STATS - REACTIONS, COMMENTS, SHARES
+                        KITNE LOGON NE LIKE KIA ETC
+                    -->
+                    <div class="post-stats-line">
+                        <div class="reactions">
+                            <!-- LIKE AUR LOVE KE ICONS -->
+                            <div class="reaction like-bg"><i class="fa-solid fa-thumbs-up"></i></div>
+                            <div class="reaction love-bg"><i class="fa-solid fa-heart"></i></div>
+                            <span class="ms-2">12K</span>
+                        </div>
+                        <div>
+                            <span>2.5K comments</span> · <span>1.2K shares</span>
+                        </div>
+                    </div>
+
+                    <!-- 
+                        POST KE BUTTONS - LIKE, COMMENT, SHARE
+                        YEH NICHE LAGAY HOTAY HAIN
+                    -->
+                    <div class="post-buttons">
+                        <div class="action">
+                            <i class="fa-regular fa-thumbs-up"></i> Like
+                        </div>
+                        <div class="action">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </div>
+                        <div class="action">
+                            <i class="fa-solid fa-share"></i> Share
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    POST 2: WEB DEVELOPERS WALI POST
+                    YEH SIMPLE POST HAI KISI GROUP KI
+                -->
+                <div class="post-box">
+
+                    <!-- POST KA HEADER -->
+                    <div class="post-header">
+                        <div class="d-flex align-items-center">
+                            <div class="rounded-circle profile-pic me-2">
+                                <img src="images/welogo.jpg" alt="Tech">
+                            </div>
+                            <div class="post-info">
+                                <h6>Web Developers Hub</h6>
+                                <span>2 hrs ago · <i class="fa-solid fa-earth-americas"></i></span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-ellipsis text-secondary"></i>
+                    </div>
+
+                    <!-- POST KA TEXT -->
+                    <div class="post-text-area">
+                        <p>Just finished building a new responsive layout using only HTML and CSS. No frameworks needed!
+                            🚀 #coding #webdev</p>
+                    </div>
+
+                    <!-- POST KI IMAGE -->
+                    <div class="post-img-box">
+                        <img src="images/story1.jpg" alt="Coding Screen">
+                    </div>
+
+                    <!-- POST KE STATS -->
+                    <div class="post-stats-line">
+                        <div class="reactions">
+                            <div class="reaction like-bg"><i class="fa-solid fa-thumbs-up"></i></div>
+                            <span class="ms-1">450</span>
+                        </div>
+                        <div>
+                            <span>120 comments</span>
+                        </div>
+                    </div>
+
+                    <!-- POST KE BUTTONS -->
+                    <div class="post-buttons">
+                        <div class="action">
+                            <i class="fa-regular fa-thumbs-up"></i> Like
+                        </div>
+                        <div class="action">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </div>
+                        <div class="action">
+                            <i class="fa-solid fa-share"></i> Share
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 
+                ================================================
+                RIGHT SIDEBAR - YEH RIGHT MEIN HAI
+                ISME SPONSORED ADS AUR CONTACTS HAIN
+                SIRF BADI SCREEN PAR DIKHTA HAI (d-none d-lg-block)
+                ================================================
+            -->
+
+            <div class="col-lg-3 d-none d-lg-block right-column">
+
+                <!-- 
+                    SPONSORED SECTION - YEH ADS WALA SECTION HAI
+                    JO LOG PAISA DE KAR POST LAGWATE HAIN
+                -->
+                <div class="side-card">
+                    <div class="heading-small">Sponsored</div>
+
+                    <!-- AD 1: ONLINE COURSE BUNDLE WALI AD -->
+                    <a href="#" class="left-item p-1">
+                        <div class="ad-img-box">
+                            <img src="images/right2.jpg" class="ad-img">
+                        </div>
+                        <div class="ad-text">
+                            <span class="ad-title">Online Course Bundle</span>
+                            <span class="ad-link">udemy.com</span>
+                        </div>
+                    </a>
+
+                    <!-- AD 2: SUMMER SALE WALI AD -->
+                    <a href="#" class="left-item p-1">
+                        <div class="ad-img-box">
+                            <img src="images/right1.jpg" class="ad-img">
+                        </div>
+                        <div class="ad-text">
+                            <span class="ad-title">Summer Sale</span>
+                            <span class="ad-link">daraz.pk</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- LINE JO SPONSORED AUR CONTACTS KO ALAG KARTI HAI -->
+                <hr class="line-spacer">
+
+                <!-- 
+                    CONTACTS SECTION - YEH FRIENDS AUR CONTACTS KI LIST HAI
+                    JIN SE BAT KAR SAKTE HAIN
+                -->
+                <div class="side-card no-bg">
+
+                    <!-- CONTACTS HEADER - ISME VIDEO, SEARCH AUR MORE ICONS HAIN -->
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="heading-small m-0">Contacts</div>
+                        <div class="icons-right">
+                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <!-- CONTACTS KI LIST - HAR CONTACT KE LIYE EK ROW -->
+
+                    <!-- META AI - ONLINE HAI (GREEN DOT) -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/meta.png" alt="Meta AI">
+                            <div class="online-dot"></div>
+                        </div>
+                        <span class="contact-person">Meta AI</span>
+                    </div>
+
+                    <!-- MUHAMMAD WASEeq - ONLINE HAI -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/waseeq.jpg" alt="Muhammad Waseeq">
+                            <div class="online-dot"></div>
+                        </div>
+                        <span class="contact-person">Muhammad Waseeq</span>
+                    </div>
+
+                    <!-- HUZAIFA ANSARI - OFFLINE HAI (NO DOT) -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/huzaifa.jpg" alt="Huzaifa Ansari">
+                        </div>
+                        <span class="contact-person">Huzaifa Ansari</span>
+                    </div>
+
+                    <!-- SUNOOQA WAHEED - ONLINE HAI -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/aliza2.jpg" alt="Sunooqa Waheed">
+                            <div class="online-dot"></div>
+                        </div>
+                        <span class="contact-person">Sunooqa Waheed</span>
+                    </div>
+
+                    <!-- ALIZA SHAH - ONLINE HAI -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/sonu.jpg" alt="Aliza Shah">
+                            <div class="online-dot"></div>
+                        </div>
+                        <span class="contact-person">Aliza Shah</span>
+                    </div>
+
+                    <!-- MUKHTAAR - OFFLINE HAI -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/aliza.jpg" alt="Mukhtaar">
+                        </div>
+                        <span class="contact-person">Mukhtaar</span>
+                    </div>
+
+                    <!-- MADAM EMAN - ONLINE HAI -->
+                    <div class="contact-row">
+                        <div class="contact-pic">
+                            <img src="images/sunooqa.jpg" alt="Madam Eman">
+                            <div class="online-dot"></div>
+                        </div>
+                        <span class="contact-person">Madam Eman</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
