@@ -248,6 +248,36 @@ body {
     margin: 10px 8px;
 }
 
+/* ===== SEE MORE / SEE LESS BUTTON STYLES ===== */
+.see-more-btn, .see-less-btn {
+    background: none;
+    border: none;
+    color: #05050c;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.see-more-btn:hover, .see-less-btn:hover {
+    background-color: #e4e6eb;
+}
+
+
+.ber{
+    background-color: #e2e5e9;
+    font-weight:var(--text-dark) bolder;
+    margin-right: 12px;
+    padding: 10px;
+    border: 1px solid #e2e5e9;
+    border-radius: 50%;
+}
+
 /* CENTER FEED - JAHAN POSTS HOTI HN  */
 
 .main-body {
